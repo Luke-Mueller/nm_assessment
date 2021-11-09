@@ -1,5 +1,3 @@
-function CitiesPage () {
-
+export default function CitiesPage () {
+    
 }
-
-export default CitiesPage;
