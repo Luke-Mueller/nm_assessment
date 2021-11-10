@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+import { Box, Container } from "@mui/material";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
@@ -22,7 +22,19 @@ export default function Layout({ children }) {
       }}
     >
       <Navbar />
-      <main style={{ flex: 1, width: "100%" }}>{children}</main>
+      <Container
+        sx={{
+          maxWidth: "md",
+          flex: 1,
+          display: "flex",
+          justifyContent: "center",
+          alignContent: "center",
+          margin: 2,
+        }}
+        component="main"
+      >
+        {children}
+      </Container>
       <Footer />
     </Box>
   );

@@ -17,7 +17,8 @@ export default function Navbar() {
       return;
     }
     let cities = await getCitiesArray(userInput);
-    console.log('cities: ', cities);
+    const response = await fetch(`api/cities/${cities[0].name}`);
+    const data = await response.json();
     cityInputRef.current.value = null;
   }
 
@@ -28,7 +29,7 @@ export default function Navbar() {
         alignItems: "center",
         justifyContent: "flex-end",
       }}
-      maxWidth="xl"
+      maxWidth="lg"
       component="header"
     >
       <TextField

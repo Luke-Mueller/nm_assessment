@@ -18,7 +18,7 @@ export default function Footer() {
         display: "flex",
         justifyContent: "flex-end",
       }}
-      maxWidth="xl"
+      maxWidth="lg"
       component="footer"
     >
       <IconButton
