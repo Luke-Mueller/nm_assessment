@@ -4,5 +4,6 @@ export default {
     cityInputWidth: "30%",
     cityInputMinWidth: "12rem",
     defaultErrorMessage: "Please enter a valid city.",
-    initialErrorObj: { hasError: false, message: " " }
+    initialErrorObj: { hasError: false, message: " " },
+    noCityFoundErrorMessage: "The city entered was not found."
 }

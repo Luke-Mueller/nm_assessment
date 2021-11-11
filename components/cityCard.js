@@ -45,29 +45,29 @@ export default function CityCard({ city }) {
           <Grid item xs={4}>
             <Typography variant="h6">Temps</Typography>
             <Typography variant="subtitle1">
-              Feels like: {Math.round(city.main.feels_like)} &#176;F
+              Feels like: {Math.round(city.main.feels_like)}&#176;F
             </Typography>
             <Typography variant="subtitle1">
-              High: {Math.round(city.main.temp_max)} &#176;F
+              High: {Math.round(city.main.temp_max)}&#176;F
             </Typography>
             <Typography variant="subtitle1">
-              Low: {Math.round(city.main.temp_min)} &#176;F
+              Low: {Math.round(city.main.temp_min)}&#176;F
             </Typography>
           </Grid>
 
           <Grid item xs={4}>
             <Typography variant="h6">Moisture</Typography>
             <Typography variant="subtitle1">
-              Humidity: {Math.round(city.main.humidity)} %
+              Humidity: {Math.round(city.main.humidity)}%
             </Typography>
             {city.rain && (
               <Typography variant="subtitle1">
-                Rainfall: {city.rain["1h"]} mm
+                Rainfall: {city.rain["1h"]}mm
               </Typography>
             )}
             {city.snow && (
               <Typography variant="subtitle1">
-                Snowfall: {city.snow["1h"]} mm
+                Snowfall: {city.snow["1h"]}mm
               </Typography>
             )}
           </Grid>
@@ -75,10 +75,10 @@ export default function CityCard({ city }) {
           <Grid item xs={4}>
             <Typography variant="h6">Wind</Typography>
             <Typography variant="subtitle1">
-              Speed: {Math.round(city.wind.speed) || 0} mph
+              Speed: {Math.round(city.wind.speed) || 0}mph
             </Typography>
             <Typography variant="subtitle1">
-              Gusts: {Math.round(city.wind.gust) || 0} mph
+              Gusts: {Math.round(city.wind.gust) || 0}mph
             </Typography>
             <Typography variant="subtitle1">
               Direction: {windDirection}
