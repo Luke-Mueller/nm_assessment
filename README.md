@@ -1,3 +1,17 @@
+## Thanks for Looking
+
+This project was made using Next.js as a Javascript framework and material for styling.  It is my first project using either one.  I chose Next.js because it solves SEO problems that React has and allows me to implement routing and some server-side code right out of the box.
+
+The api key was left in the code because Next.js insures it will not be exposed to clients. When deployed, this app would likely allow the host to deal with key storage.  I wanted it to be available so you would not have to generate your own.
+
+This project represents a day and a half of work.  It could use a fair deal of improvement yet, however, it is a good representation of my work within a limited time-frame.  I would liked to have deployed it, but I ran out of time.
+
+Feel free to contact me for help setting up the project on your machine. I look forward to discussing this with you and hope to talk soon.
+
+Thanks,
+
+Luke
+
 ## Getting Started
 
 First, run the development server:
@@ -10,9 +24,3 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
