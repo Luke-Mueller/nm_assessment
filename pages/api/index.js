@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs/promises');
 
-function _getRandomInt(min, max) {
+export function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
@@ -14,7 +14,7 @@ export async function getRandomCityId() {
   const fileData = await fs.readFile(filePath)
   const data = await JSON.parse(fileData);
 
-  const randomInt = _getRandomInt(0, data.length)
+  const randomInt = getRandomInt(0, data.length)
 
   return data[randomInt].id;
 }
