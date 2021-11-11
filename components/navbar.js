@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import { Container, IconButton, TextField, Typography } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
@@ -28,18 +27,22 @@ export default function Navbar() {
         message: constants.noCityFoundErrorMessage,
       };
       setError(error);
+      return;
     }
     if (cities.length === 1) {
       const response = await fetch(`api/cities/${cities[0].id}`);
       const { data } = await response.json();
       router.push({
-        pathname: "/cities/[cityId]",
+        pathname: "/city/[cityId]",
         query: { cityId: data.id },
       });
     }
     if (cities.length > 1) {
       // link to cities route
-      console.log("multiple data: ", cities);
+      router.push({
+        pathname: "/cities/[cityName]",
+        query: { cityName: userInput.toLowerCase() },
+      });
     }
     cityInputRef.current.value = null;
   }
@@ -54,16 +57,29 @@ export default function Navbar() {
       maxWidth="lg"
       component="header"
     >
-      {router.pathname === "/cities/[cityId]" && (
-        <Link href="/">
-          <IconButton color="secondary" aria-label="go back">
-            <KeyboardBackspaceIcon />
-            <Typography variant="button">Go Back</Typography>
-          </IconButton>
-        </Link>
+      {router.pathname === "/city/[cityId]" && (
+        <IconButton
+          color="secondary"
+          aria-label="back button"
+          onClick={() => router.back()}
+        >
+          <KeyboardBackspaceIcon />
+          <Typography variant="button">Back</Typography>
+        </IconButton>
       )}
 
-      {(router.pathname === "/cities/[cityId]" || "/") && (
+      {router.pathname === "/cities/[cityName]" && (
+        <IconButton
+          color="secondary"
+          aria-label="back button"
+          onClick={() => router.back()}
+        >
+          <KeyboardBackspaceIcon />
+          <Typography variant="button">Back</Typography>
+        </IconButton>
+      )}
+
+      {(router.pathname === "/city/[cityId]" || router.pathname === "/") && (
         <TextField
           color="secondary"
           onChange={() => setError({ hasError: false, message: " " })}
@@ -77,7 +93,7 @@ export default function Navbar() {
           sx={{
             width: constants.cityInputWidth,
             minWidth: constants.cityInputMinWidth,
-            marginLeft: 'auto'
+            marginLeft: "auto",
           }}
           variant="standard"
         />
