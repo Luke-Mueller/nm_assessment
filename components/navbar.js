@@ -38,7 +38,6 @@ export default function Navbar() {
       });
     }
     if (cities.length > 1) {
-      // link to cities route
       router.push({
         pathname: "/cities/[cityName]",
         query: { cityName: userInput.toLowerCase() },
@@ -79,7 +78,7 @@ export default function Navbar() {
         </IconButton>
       )}
 
-      {(router.pathname === "/city/[cityId]" || router.pathname === "/") && (
+      {router.pathname === "/" && (
         <TextField
           color="secondary"
           onChange={() => setError({ hasError: false, message: " " })}

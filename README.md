@@ -4,7 +4,7 @@ This project was made using Next.js as a Javascript framework and material for s
 
 The api key was left in the code because Next.js insures it will not be exposed to clients. When deployed, this app would likely allow the host to deal with key storage.  I wanted it to be available so you would not have to generate your own.
 
-This project represents a day and a half of work.  It could use improvement, however, it is a good representation of my work within a limited time-frame.  I would liked to have deployed it and tested it more thoroughly.
+This project represents a day and a half of work.  It could use improvement here and there, however, it is a good representation of my work within a limited time-frame.  I would liked to have deployed it and tested it more thoroughly.
 
 Feel free to contact me for help setting up the project on your machine. I look forward to discussing this with you and hope to talk soon.
 
