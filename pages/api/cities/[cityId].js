@@ -1,6 +1,6 @@
-const key = "e837619059a131168a749b809109aaf3";
+import { key } from "../index";
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   if (req.method === "GET") {
     try {
       const response = await fetch(
@@ -13,3 +13,5 @@ export default async function handler(req, res) {
     }
   }
 }
+
+export default handler;
